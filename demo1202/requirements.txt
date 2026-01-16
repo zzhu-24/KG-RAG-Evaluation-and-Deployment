@@ -1,0 +1,26 @@
+# LightRAG 实验项目依赖
+# 安装命令: pip install -r requirements.txt
+
+# 核心框架
+lightrag-hku>=0.1.0
+
+# 深度学习框架
+torch>=2.0.0
+transformers>=4.30.0
+
+# 异步处理
+nest-asyncio>=1.5.0
+
+# Web 抓取（用于 fetch_f1_news.py）
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+tqdm>=4.64.0
+
+# 数据处理（可选，但推荐）
+numpy>=1.24.0
+pandas>=2.0.0
+
+# 注意：
+# 1. 如果使用 GPU，需要安装对应版本的 CUDA 和 cuDNN
+# 2. 模型文件需要单独下载（BGE-M3, Qwen 等）
+# 3. 某些依赖可能已经包含在 lightrag-hku 中

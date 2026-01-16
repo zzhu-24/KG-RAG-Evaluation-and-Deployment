@@ -4,14 +4,14 @@ import xml.etree.ElementTree as ET
 from neo4j import GraphDatabase
 
 # Constants
-WORKING_DIR = "./dickens"
+WORKING_DIR = "./cache/paper_demo"
 BATCH_SIZE_NODES = 500
 BATCH_SIZE_EDGES = 100
 
 # Neo4j connection credentials
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "your_password"
+NEO4J_URI="neo4j+s://26eaa64a.databases.neo4j.io"
+NEO4J_USERNAME="neo4j"
+NEO4J_PASSWORD='znuWLl4CVneigdA-ZuOOZn6WDv_2EInq6mW9xDYAoFU'
 
 
 def xml_to_json(xml_file):

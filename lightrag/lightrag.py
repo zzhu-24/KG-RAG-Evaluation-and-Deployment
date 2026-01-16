@@ -2442,7 +2442,12 @@ class LightRAG:
         if llm_response.get("is_streaming"):
             return llm_response.get("response_iterator")
         else:
-            return llm_response.get("content", "")
+            content = llm_response.get("content")
+            # If content is None, try to get error message from result
+            if content is None:
+                error_message = result.get("message", "Query failed with unknown error")
+                return error_message
+            return content
 
     def query_data(
         self,
@@ -2797,14 +2802,15 @@ class LightRAG:
 
         except Exception as e:
             logger.error(f"Query failed: {e}")
-            # Return error response
+            error_message = f"Query failed: {str(e)}"
+            # Return error response with error message in content
             return {
                 "status": "failure",
-                "message": f"Query failed: {str(e)}",
+                "message": error_message,
                 "data": {},
                 "metadata": {},
                 "llm_response": {
-                    "content": None,
+                    "content": error_message,
                     "response_iterator": None,
                     "is_streaming": False,
                 },

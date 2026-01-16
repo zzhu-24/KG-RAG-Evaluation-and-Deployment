@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 日志文件
+log/
+*.log
+
+# 缓存文件
+cache/
+*.cache
+
+# IDE相关
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# 环境变量
+.env
+.env.local
+
+# 大型数据文件（保留示例文件）
+# F1QA新闻数据（除了示例文件）
+F1QA/news/f1_news_*.jsonl
+!F1QA/news/news_example.jsonl
+!F1QA/news/f1_news.jsonl
+
+# MetaQA生成的缓存文件
+MetaQA/entity/*.tar.gz
+MetaQA/entity/*.npz
+MetaQA/analysis_output/*
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 模型文件（如果本地存储）
+*.bin
+*.safetensors
+models/
+
+# 调试日志
+debug.log
+.cursor/debug.log
