@@ -151,6 +151,8 @@ docker-compose.yml
 docker-compose.*.yml
 docker-build-push.sh
 .dockerignore
+docs/DockerDeployment.md
+.github/workflows/docker-*.yml
 
 # API & WebUI (not needed for demo1202 experiments)
 /lightrag/api/
