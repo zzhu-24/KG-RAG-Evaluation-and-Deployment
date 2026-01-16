@@ -29,6 +29,28 @@ Answers may contain multiple values, separated by `|`:
 what films did [Michelle Trachtenberg] star in	Inspector Gadget|Black Christmas|Ice Princess
 ```
 
+## Data Download
+
+**Important**: MetaQA dataset files are not included in this repository. You need to download them separately.
+
+1. Download the MetaQA dataset from the [official repository](https://github.com/yuyuz/MetaQA)
+2. Extract the dataset and place the files in the following structure:
+   ```
+   demo1202/MetaQA/
+   ├── kb.txt                    # Knowledge graph triples
+   ├── 1-hop/
+   │   ├── vanilla/
+   │   │   ├── qa_train.txt
+   │   │   ├── qa_dev.txt
+   │   │   └── qa_test.txt
+   │   └── ntm/
+   │       ├── qa_train.txt
+   │       ├── qa_dev.txt
+   │       └── qa_test.txt
+   ├── 2-hop/                    # Similar structure
+   └── 3-hop/                    # Similar structure
+   ```
+
 ## Usage
 
 1. Ensure LightRAG and related dependencies are installed:
@@ -37,7 +59,7 @@ pip install lightrag-hku
 pip install transformers torch
 ```
 
-2. Ensure MetaQA data files exist:
+2. Ensure MetaQA data files have been downloaded and placed in the correct location:
    - `MetaQA/kb.txt` - Knowledge graph triples
    - `MetaQA/1-hop/vanilla/qa_test.txt` - Test set QA pairs
 

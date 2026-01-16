@@ -58,6 +58,28 @@ pip install nest-asyncio
 
 MetaQA is a knowledge graph question answering dataset containing movie-related knowledge graphs and question-answer pairs. This experiment uses LightRAG to evaluate on the MetaQA dataset.
 
+### Data Download
+
+**Important**: MetaQA dataset files are not included in this repository. You need to download them separately.
+
+1. Download the MetaQA dataset from the [official repository](https://github.com/yuyuz/MetaQA)
+2. Extract the dataset and place the files in the following structure:
+   ```
+   demo1202/MetaQA/
+   ├── kb.txt                    # Knowledge graph triples
+   ├── 1-hop/
+   │   ├── vanilla/
+   │   │   ├── qa_train.txt
+   │   │   ├── qa_dev.txt
+   │   │   └── qa_test.txt
+   │   └── ntm/
+   │       ├── qa_train.txt
+   │       ├── qa_dev.txt
+   │       └── qa_test.txt
+   ├── 2-hop/                    # Similar structure
+   └── 3-hop/                    # Similar structure
+   ```
+
 ### Data Format
 
 - **Knowledge Graph** (`MetaQA/kb.txt`): `subject|predicate|object` format

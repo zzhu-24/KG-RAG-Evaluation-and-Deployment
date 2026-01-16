@@ -106,10 +106,15 @@ demo1202/F1QA/news/f1_news_*.jsonl
 !demo1202/F1QA/news/news_example.jsonl
 !demo1202/F1QA/news/f1_news.jsonl
 
-# MetaQA generated cache files
-demo1202/MetaQA/entity/*.tar.gz
-demo1202/MetaQA/entity/*.npz
+# MetaQA data files (users should download from official source)
+demo1202/MetaQA/kb.txt
+demo1202/MetaQA/1-hop/
+demo1202/MetaQA/2-hop/
+demo1202/MetaQA/3-hop/
+demo1202/MetaQA/entity/
 demo1202/MetaQA/analysis_output/*
+# Keep only the analysis script
+!demo1202/MetaQA/analyze_metaqa.py
 
 # Environment variables
 .env.local
