@@ -226,9 +226,10 @@ python demo1202/print_graphml_example.py
 
 This project is based on the LightRAG framework, please refer to LightRAG's license.
 
-## Contributing
+## Acknowledgements
 
-Issues and Pull Requests are welcome!
+This project is based on and adapted from [UpstreamRepoName](https://github.com/xxx/yyy).
+We thank the original authors and contributors for their work.
 
 ## Related Links
 

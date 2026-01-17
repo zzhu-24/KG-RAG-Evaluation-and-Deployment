@@ -66,7 +66,7 @@ else:
 # MetaQA data path (run from project root directory)
 METAQA_DIR = "./demo1202/MetaQA"
 KB_FILE = os.path.join(METAQA_DIR, "kb.txt")
-QA_TEST_FILE = os.path.join(METAQA_DIR, "1-hop/vanilla/qa_test.txt")
+QA_TEST_FILE = os.path.join(METAQA_DIR, "2-hop/vanilla/qa_test.txt")
 
 # llm_model_name="Qwen/Qwen2.5-1.5B-Instruct"
 # llm_model_name="Qwen/Qwen3-4B-Thinking-2507-FP8"
