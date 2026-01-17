@@ -228,7 +228,7 @@ This project is based on the LightRAG framework, please refer to LightRAG's lice
 
 ## Acknowledgements
 
-This project is based on and adapted from [UpstreamRepoName](https://github.com/xxx/yyy).
+This project is based on and adapted from [LightRAG](https://github.com/xxx/yyy).
 We thank the original authors and contributors for their work.
 
 ## Related Links
