@@ -1,5 +1,8 @@
 # LightRAG Experiments: MetaQA and F1QA
 
+This project is based on and adapted from [LightRAG](https://github.com/xxx/yyy).
+We thank the original authors and contributors for their work.
+
 This project contains two Knowledge Graph Question Answering (KGQA) experiments based on the LightRAG framework:
 
 1. **MetaQA** - Knowledge graph question answering evaluation on the MetaQA dataset
@@ -9,28 +12,28 @@ This project contains two Knowledge Graph Question Answering (KGQA) experiments 
 
 ```
 demo1202/
-├── MetaQA/                    # MetaQA dataset and experiment code
-│   ├── kb.txt                # Knowledge graph triple data
-│   ├── 1-hop/                # 1-hop question dataset
-│   ├── 2-hop/                # 2-hop question dataset
-│   ├── 3-hop/                # 3-hop question dataset
-│   ├── analyze_metaqa.py     # Data analysis script
-│   └── entity/               # Entity-related files (cache, not included in repository)
-├── F1QA/                     # F1QA experiment code and data
-│   ├── fetch_f1_news.py      # F1 news scraping script
-│   ├── news/                  # News data (example files only)
-│   │   └── news_example.jsonl # Example news data
-│   └── sources.json          # Data source configuration
-├── metaqa_lightrag.py        # MetaQA main experiment script
-├── f1qa_prepare.py           # F1QA data preparation script
-├── f1qa_query.py             # F1QA query script
-├── f1qa_status.py            # F1QA status viewing script
-├── f1qa_lightrag.py          # F1QA complete workflow script (split version)
-├── view_entity_cache.py       # Entity cache viewing tool
-├── view_graphml_format.py    # GraphML format viewing tool
-├── print_graphml_example.py  # GraphML example output
-├── demo.py                   # Basic demo script
-└── README.md                 # This file
+├── MetaQA/                       # MetaQA dataset and experiment code
+│   ├── kb.txt                   # Knowledge graph triple data (expected, add manually)
+│   ├── 1-hop/                   # 1-hop question dataset (expected, add manually)
+│   ├── 2-hop/                   # 2-hop question dataset (expected, add manually)
+│   ├── 3-hop/                   # 3-hop question dataset (expected, add manually)
+│   ├── entity/                  # Entity cache (generated, not in repository)
+│   └── analyze_metaqa.py        # Data analysis script
+├── F1QA/                        # F1QA experiment code and data
+│   ├── fetch_f1_news.py         # F1 news scraping script
+│   ├── README.md                # F1QA documentation
+│   ├── news/                    # News data
+│   │   ├── news_example.jsonl   # Example news data
+│   │   └── f1_news.jsonl        # F1 news data (fetched or example)
+│   └── sources.json             # Data source configuration
+├── metaqa_lightrag.py           # MetaQA main experiment script
+├── f1qa_prepare.py              # F1QA data preparation script
+├── f1qa_query.py                # F1QA query script
+├── f1qa_status.py               # F1QA status viewing script
+├── f1qa_lightrag.py             # F1QA complete workflow script (split version)
+├── print_graphml_example.py     # GraphML example output
+├── README_metaqa.md             # MetaQA experiment documentation
+└── TOKEN_LIMITS_EXPLANATION.md  # Token limits explanation
 ```
 
 ## Requirements
@@ -159,16 +162,6 @@ python demo1202/f1qa_query.py \
 python demo1202/f1qa_status.py
 ```
 
-### Documentation
-
-- [F1QA_PREPARE_FLOW.md](F1QA_PREPARE_FLOW.md) - Detailed data preparation workflow
-- [README_SEPARATION.md](README_SEPARATION.md) - Script separation explanation
-- [F1QA_TECHNICAL_REPORT.md](F1QA_TECHNICAL_REPORT.md) - Technical report
-- [CONCURRENCY_EXPLANATION.md](CONCURRENCY_EXPLANATION.md) - Concurrency processing explanation
-- [TOKEN_LIMITS_EXPLANATION.md](TOKEN_LIMITS_EXPLANATION.md) - Token limits explanation
-- [cache_data_format_documentation.md](cache_data_format_documentation.md) - Cache data format documentation
-- [entity_cache_generation_flow.md](entity_cache_generation_flow.md) - Entity cache generation flow
-
 ## Model Configuration
 
 ### Default Configuration
@@ -189,18 +182,6 @@ async def initialize_rag():
 ```
 
 ## Utility Scripts
-
-### View Entity Cache
-
-```bash
-python demo1202/view_entity_cache.py
-```
-
-### View GraphML Format
-
-```bash
-python demo1202/view_graphml_format.py
-```
 
 ### Print GraphML Example
 
