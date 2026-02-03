@@ -1,0 +1,2 @@
+/home/infres/ymok-25/miniconda3/envs/myenv/bin/python: can't open file '/home/infres/ymok-25/KG-RAG-Evaluation-and-Deployment/demo1202/HotpotQA/train.py': [Errno 2] No such file or directory
+srun: error: node40: task 0: Exited with exit code 2

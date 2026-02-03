@@ -1,0 +1,9 @@
+Starting job on node: node40.enst.fr
+Job started at: mar. 03 févr. 2026 10:27:41 CET
+
+[LightRAG] Step 1: Chunking
+Number of unique documents: 66581
+Number of chunks: 66897
+Avg document length: 87.19322329193012
+
+[LightRAG] Step 2: Entity & Relation Extraction
